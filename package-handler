@@ -1,0 +1,18 @@
+#!/usr/local/bin/perl
+
+use warnings;
+use strict;
+
+use PackageHandler;
+
+my @args = @ARGV;
+# echo back action
+print join(" ", @ARGV) . "\n";
+
+my $adjusted_args = { action => shift @args };
+$adjusted_args->{package} = shift @args if @args;
+$adjusted_args->{dependencies} = \@args if @args;
+
+my $handler = PackageHandler->new( $adjusted_args );
+$handler->route;
+
