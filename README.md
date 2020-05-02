@@ -16,7 +16,7 @@ These scripts and the libraries they use are written in Perl and there are a few
 For convenience sake, I have included a Dockerfile that will allow you to install these requirements and my code and run the scripts by doing:
 
 ```
-  git git@gitlab.com:simiomalo/packager.git
+  git git@github.com:robojandro/packager.git
   cd packager
   docker build -t mpalma-packager .
   docker run -it mpalma-packager /bin/bash
